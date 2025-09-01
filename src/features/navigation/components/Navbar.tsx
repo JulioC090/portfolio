@@ -6,27 +6,19 @@ import { MobileMenu } from '@/features/navigation/components/MobileMenu';
 import NavLink from '@/features/navigation/components/NavLink';
 import SkipLink from '@/features/navigation/components/SkipLink';
 import { navigationItens } from '@/features/navigation/data/navigationItens';
+import { useAnchorNavigation } from '@/features/navigation/hooks/useAnchorNavigation';
 import useIsScrolled from '@/features/navigation/hooks/useIsScrolled';
-import { NavItem } from '@/features/navigation/types/INavItem';
 import ThemeToggleButton from '@/features/theme/components/ThemeToggleButton';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const { isScrolled } = useIsScrolled();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleNavClick = useCallback((item: NavItem) => {
-    if (item.anchor && location.pathname === '/') {
-      const element = document.querySelector(item.href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []);
+  const handleNavClick = useAnchorNavigation();
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {

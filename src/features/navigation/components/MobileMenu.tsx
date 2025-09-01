@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'motion/react';
 interface MobileMenuProps {
   isOpen: boolean;
   navigation: NavItem[];
-  onNavClick: (item: NavItem) => void;
+  onNavClick: (href: string, anchor?: boolean) => void;
 }
 
 export function MobileMenu({

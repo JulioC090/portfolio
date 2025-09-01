@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 interface NavLinkProps {
   item: NavItem;
-  onClick: (item: NavItem) => void;
+  onClick: (href: string, anchor?: boolean) => void;
   className?: string;
 }
 
@@ -15,7 +15,7 @@ export default function NavLink({ item, onClick, className }: NavLinkProps) {
         'text-muted-foreground hover:text-foreground focusable rounded-md p-2',
         className,
       )}
-      onClick={() => onClick(item)}
+      onClick={() => onClick(item.href, item.anchor)}
     >
       {item.name}
     </a>
