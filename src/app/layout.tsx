@@ -1,9 +1,13 @@
+import { ThemeProvider } from '@/features/theme/contexts/ThemeProvider';
 import type { Metadata } from 'next';
 import './index.css';
 
 export const metadata: Metadata = {
-  title: 'My portfolio',
-  description: 'Welcome to my portfolio',
+  title: "Pigeon's Lab",
+  description: "Welcome to the Pigeon's Lab",
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({
@@ -12,8 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
-      <body className={'antialiased'}>{children}</body>
+    <html lang="pt-BR">
+      <body className={'antialiased'}>
+        <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

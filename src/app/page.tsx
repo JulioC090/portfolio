@@ -1,10 +1,23 @@
-import { Button } from '@/components/ui/button';
+import Navbar from '@/features/navigation/components/Navbar';
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-background flex justify-center items-center gap-2 flex-col">
-      <h1 className="text-foreground text-2xl">Hello World!!!</h1>
-      <Button>Click Here</Button>
+    <div className="w-full min-h-screen bg-background flex flex-col">
+      <Navbar />
+      <div className="h-full">
+        <div className="h-screen" id="about">
+          Sobre
+        </div>
+        <div className="h-screen" id="projects">
+          Projetos
+        </div>
+        <div className="h-screen" id="services">
+          Serviços
+        </div>
+        <div className="h-screen" id="contact">
+          Contato
+        </div>
+      </div>
     </div>
   );
 }
