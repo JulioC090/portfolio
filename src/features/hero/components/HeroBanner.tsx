@@ -1,5 +1,6 @@
 'use client';
 
+import Section from '@/components/Section';
 import { Button } from '@/components/ui/button';
 import ScrollIndicator from '@/features/hero/components/ScrollIndicator';
 import { navigationMap } from '@/features/navigation/data/navigationItens';
@@ -39,7 +40,7 @@ export default function HeroBanner() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-24">
+    <Section>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -87,6 +88,6 @@ export default function HeroBanner() {
 
         <ScrollIndicator />
       </motion.div>
-    </section>
+    </Section>
   );
 }
