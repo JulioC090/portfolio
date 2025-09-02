@@ -49,14 +49,14 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.478 0.15872 271.797);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.478 0.15872 271.797);
+  --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -83,13 +83,13 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.478 0.15872 271.797);
+  --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: oklch(0.478 0.15872 271.797);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -153,6 +153,23 @@
   :focus:not(:focus-visible) {
     outline: none;
   }
+
+  .text-hero {
+    @apply text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none;
+  }
+  
+  .text-subhead {
+    @apply text-xl md:text-2xl font-medium tracking-wide leading-relaxed text-muted-foreground;
+  }
+
+  .animate-lift {
+    @apply transition-all duration-200 ease-out hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .animate-glow {
+    @apply transition-all duration-200 ease-out hover:shadow-lg hover:shadow-primary/25;
+  }
+
 
   html {
     scroll-behavior: smooth;
