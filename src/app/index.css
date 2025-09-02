@@ -125,7 +125,7 @@
   }
 
   .skip-link {
-    position: absolute;
+    position: fixed;
     bottom: -40px;
     left: 6px;
     background: rgb(var(--accent));
