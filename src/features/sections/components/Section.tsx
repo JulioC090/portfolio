@@ -8,13 +8,7 @@ interface SectionProps {
 
 export default function Section({ id, className, children }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={cn(
-        'min-h-screen flex items-center justify-center pt-20',
-        className,
-      )}
-    >
+    <section id={id} className={cn('min-h-screen pt-20', className)}>
       {children}
     </section>
   );

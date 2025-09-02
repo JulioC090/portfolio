@@ -1,5 +1,6 @@
-import HeroBanner from '@/features/hero/components/HeroBanner';
 import Navbar from '@/features/navigation/components/Navbar';
+import AboutSection from '@/features/sections/components/AboutSection';
+import HeroBanner from '@/features/sections/components/HeroBanner';
 
 export default function Home() {
   return (
@@ -8,9 +9,8 @@ export default function Home() {
       <main id="main" className="h-full focus:outline-none">
         <HeroBanner />
 
-        <div className="h-screen" id="about">
-          Sobre
-        </div>
+        <AboutSection />
+
         <div className="h-screen" id="projects">
           Projetos
         </div>
