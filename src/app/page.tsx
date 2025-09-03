@@ -1,6 +1,7 @@
 import Navbar from '@/features/navigation/components/Navbar';
 import AboutSection from '@/features/sections/components/AboutSection';
 import ContactSection from '@/features/sections/components/ContactSection';
+import { Footer } from '@/features/sections/components/Footer';
 import HeroBanner from '@/features/sections/components/HeroBanner';
 import ProjectsSection from '@/features/sections/components/ProjectsSection';
 import ServicesSection from '@/features/sections/components/ServicesSection';
@@ -20,6 +21,8 @@ export default function Home() {
 
         <ContactSection />
       </main>
+
+      <Footer />
     </div>
   );
 }
