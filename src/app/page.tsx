@@ -2,6 +2,7 @@ import Navbar from '@/features/navigation/components/Navbar';
 import AboutSection from '@/features/sections/components/AboutSection';
 import HeroBanner from '@/features/sections/components/HeroBanner';
 import ProjectsSection from '@/features/sections/components/ProjectsSection';
+import ServicesSection from '@/features/sections/components/ServicesSection';
 
 export default function Home() {
   return (
@@ -14,9 +15,8 @@ export default function Home() {
 
         <ProjectsSection />
 
-        <div className="h-screen" id="services">
-          Serviços
-        </div>
+        <ServicesSection />
+
         <div className="h-screen" id="contact">
           Contato
         </div>
