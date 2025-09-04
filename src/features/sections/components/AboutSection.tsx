@@ -75,7 +75,7 @@ export default function AboutSection() {
         </div>
 
         <motion.div variants={ctaVariants(shouldReduceMotion)}>
-          <Button size="lg" className="group min-w-[180px]" asChild>
+          <Button size="lg" className="min-w-[180px]" asChild>
             <a href={navigationMap.contact.href}>
               <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
               {about.cta}

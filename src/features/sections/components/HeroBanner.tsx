@@ -41,19 +41,14 @@ export default function HeroBanner() {
           variants={ctaVariants(shouldReduceMotion)}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <Button size="lg" className="animate-glow focus-ring group" asChild>
+          <Button size="lg" asChild>
             <a href={navigationMap.projects.href}>
               {hero.project}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="focus-ring group"
-            asChild
-          >
+          <Button variant="outline" size="lg" asChild>
             <a href={navigationMap.contact.href}>
               <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
               {hero.cta}

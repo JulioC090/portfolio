@@ -57,7 +57,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="group animate-lift border-0 bg-card shadow-lg hover:scale-105 transition-transform">
+    <Card className="animate-lift border-0 bg-card shadow-lg hover:scale-105 transition-transform">
       <CardContent className="p-8">
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -125,7 +125,7 @@ export default function ContactForm() {
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full animate-glow focus-ring group"
+            className="w-full"
             size="lg"
           >
             {isLoading ? (

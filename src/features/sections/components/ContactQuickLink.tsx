@@ -18,7 +18,7 @@ export function QuickLink(props: QuickLinkProps) {
           <props.icon />
         </IconBox>
         <h3 className="text-lg font-semibold mb-2">{props.title}</h3>
-        <Button variant="outline" className="focus-ring w-full" asChild>
+        <Button variant="outline" className="w-full" asChild>
           <a
             href={props.link.href}
             {...(props.link.blank && {

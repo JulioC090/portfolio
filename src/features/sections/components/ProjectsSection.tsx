@@ -53,7 +53,7 @@ export default function ProjectsSection() {
 
         {project.projects.length > 6 && (
           <motion.div variants={ctaVariants(shouldReduceMotion)}>
-            <Button size="lg" className="group min-w-[180px]" asChild>
+            <Button size="lg" className="min-w-[180px]" asChild>
               <a href="/projects">
                 <BoxIcon className="mr-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 {project.more}
