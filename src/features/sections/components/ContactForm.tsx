@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { contact } from '@/features/sections/data/contact';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 import { Send } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -30,12 +31,19 @@ export default function ContactForm() {
     setIsLoading(true);
 
     try {
-      // Simular envio - aqui você integraria com API real
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        data,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+          blockHeadless: true,
+        },
+      );
+
+      if (response.status !== 200) throw Error(response.text);
 
       toast(contact.toast.success);
-
-      console.log(data);
 
       reset();
     } catch {
