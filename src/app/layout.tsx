@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={'antialiased'}>
+      <body className="antialiased">
         <Toaster />
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
           {children}
