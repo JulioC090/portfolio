@@ -1,3 +1,4 @@
+import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/features/theme/contexts/ThemeProvider';
 import type { Metadata } from 'next';
 import './index.css';
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={'antialiased'}>
+        <Toaster />
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
           {children}
         </ThemeProvider>
