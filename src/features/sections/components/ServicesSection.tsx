@@ -1,5 +1,6 @@
 'use client';
 
+import IconBox from '@/components/IconBox';
 import { Card, CardContent } from '@/components/ui/card';
 import HeadLineText from '@/features/sections/components/HeadlineText';
 import Section from '@/features/sections/components/Section';
@@ -46,7 +47,9 @@ export default function ServicesSection() {
               >
                 <Card className="group animate-lift overflow-hidden border-0 shadow-lg bg-card h-full w-full flex flex-col hover:scale-105 transition-transform">
                   <CardContent className="px-6 py-8  flex-1 flex flex-col text-left">
-                    <service.icon className="h-10 w-10 text-primary mb-4" />
+                    <IconBox className="mb-4">
+                      <service.icon />
+                    </IconBox>
                     <h3 className="text-xl font-semibold tracking-tight mb-2">
                       {service.title}
                     </h3>

@@ -1,3 +1,4 @@
+import IconBox from '@/components/IconBox';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { JSX } from 'react';
@@ -13,9 +14,9 @@ export function QuickLink(props: QuickLinkProps) {
   return (
     <Card className="group animate-lift border-0 shadow-lg bg-card hover:scale-105 transition-transform">
       <CardContent className="p-6 text-center">
-        <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <props.icon className="h-6 w-6 text-primary" />
-        </div>
+        <IconBox className="mx-auto mb-4">
+          <props.icon />
+        </IconBox>
         <h3 className="text-lg font-semibold mb-2">{props.title}</h3>
         <Button variant="outline" className="focus-ring w-full" asChild>
           <a

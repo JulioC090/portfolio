@@ -1,5 +1,6 @@
 'use client';
 
+import IconBox from '@/components/IconBox';
 import { Button } from '@/components/ui/button';
 import { navigationMap } from '@/features/navigation/data/navigationItens';
 import HeadLineText from '@/features/sections/components/HeadlineText';
@@ -64,7 +65,9 @@ export default function AboutSection() {
               custom={index}
               variants={itemVariants(shouldReduceMotion)}
             >
-              <card.icon className="h-10 w-10 text-primary mb-4" />
+              <IconBox className="mb-4">
+                <card.icon />
+              </IconBox>
               <h3 className="text-lg font-bold mb-2">{card.title}</h3>
               <p className="text-muted-foreground">{card.description}</p>
             </motion.div>
