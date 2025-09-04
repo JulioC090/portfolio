@@ -15,7 +15,7 @@ export default function ProjectsSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <Section id="projects" className="mt-12">
+    <Section id="projects">
       <motion.div
         className="container-narrow mx-auto flex flex-col gap-12 text-center"
         variants={containerVariants(shouldReduceMotion)}
