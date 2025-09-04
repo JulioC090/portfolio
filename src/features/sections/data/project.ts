@@ -36,7 +36,7 @@ export const project = {
       title: 'Portfolio',
       description:
         'Meu Portfolio minimalista para showcasing de trabalhos criativos, com animações suaves, performance otimizada e design responsivo.',
-      image: '/projects/portfolio.png',
+      image: '/projects/portfolio.gif',
       tags: ['NextJS', 'Motion', 'Shadcn', 'Typescript'],
       githubUrl: 'https://github.com/JulioC090/portfolio',
     },
