@@ -2,12 +2,12 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Slot } from '@radix-ui/react-slot';
 
-interface IconToggleButtonProps {
+interface IconToggleButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
   active?: boolean;
   iconOn: React.ReactNode;
   iconOff: React.ReactNode;
-  ariaLabel?: string;
 }
 
 export function IconToggleButton({
@@ -15,15 +15,15 @@ export function IconToggleButton({
   active,
   iconOn,
   iconOff,
-  ariaLabel,
+  ...props
 }: IconToggleButtonProps) {
   return (
     <Button
       variant="ghost"
       size="sm"
       onClick={onClick}
-      aria-label={ariaLabel}
       className="relative p-2"
+      {...props}
     >
       <span
         className={cn(
