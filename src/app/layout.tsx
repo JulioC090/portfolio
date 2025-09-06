@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/logo.svg',
   },
+  alternates: {},
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY,
+  },
 };
 
 export default function RootLayout({
