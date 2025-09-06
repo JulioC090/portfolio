@@ -10,7 +10,8 @@ export const project = {
       title: 'Bookspace',
       description:
         'Aplicativo de gestão de espaços que permite verificar disponibilidade e reservar salas e ambientes de forma simples e direta, eliminando planilhas e comunicações complexas.',
-      image: '/projects/bookspace.gif',
+      videoUrl: '/projects/bookspace.mp4',
+      thumbUrl: '/projects/bookspace-thumb.webp',
       tags: ['Typescript', 'NodeJS', 'NextJS', 'Prisma', 'Jest', 'Fastify'],
       githubUrl: 'https://github.com/JulioC090/book-space',
     },
@@ -18,7 +19,8 @@ export const project = {
       title: 'Commit Generator',
       description:
         'Commit Generator é uma ferramenta que utiliza IA para gerar mensagens de commit automaticamente a partir das alterações no código.',
-      image: '/projects/commit-generator.gif',
+      videoUrl: '/projects/commit-generator.mp4',
+      thumbUrl: '/projects/commit-generator-thumb.webp',
       tags: ['Typescript', 'NodeJS', 'Git'],
       liveUrl: 'https://www.npmjs.com/package/@commit-generator/cli',
       githubUrl: 'https://github.com/JulioC090/commit-generator',
@@ -27,7 +29,8 @@ export const project = {
       title: 'Weather Forecast',
       description:
         'Website que exibe clima em tempo real de qualquer cidade, com dados precisos de temperatura e previsão do tempo',
-      image: '/projects/weather-forecast.gif',
+      videoUrl: '/projects/weather-forecast.mp4',
+      thumbUrl: '/projects/weather-forecast-thumb.webp',
       tags: ['Vite', 'React', 'Typescript', 'CSS3'],
       liveUrl: 'https://julioc090.github.io/weather-forecast/',
       githubUrl: 'https://github.com/JulioC090/weather-forecast',
@@ -36,7 +39,8 @@ export const project = {
       title: 'Portfolio',
       description:
         'Meu Portfolio minimalista para showcasing de trabalhos criativos, com animações suaves, performance otimizada e design responsivo.',
-      image: '/projects/portfolio.gif',
+      videoUrl: '/projects/portfolio.mp4',
+      thumbUrl: '/projects/portfolio-thumb.webp',
       tags: ['NextJS', 'Motion', 'Shadcn', 'Typescript'],
       githubUrl: 'https://github.com/JulioC090/portfolio',
     },

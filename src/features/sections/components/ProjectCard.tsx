@@ -2,12 +2,12 @@ import GithubIcon from '@/components/GithubIcon';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
-import Image from 'next/image';
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  videoUrl: string;
+  thumbUrl: string;
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -16,7 +16,8 @@ interface ProjectCardProps {
 export function ProjectCard({
   title,
   description,
-  image,
+  videoUrl,
+  thumbUrl,
   tags,
   liveUrl,
   githubUrl,
@@ -24,12 +25,16 @@ export function ProjectCard({
   return (
     <Card className="group animate-lift overflow-hidden border-0 shadow-lg bg-card h-full w-full flex flex-col hover:scale-105 transition-transform">
       <div className="aspect-video overflow-hidden relative">
-        <Image
-          src={image}
-          alt={`${title} project screenshot`}
+        <video
+          src={videoUrl}
+          poster={thumbUrl}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-          fill
+          autoPlay
+          loop
+          muted
+          playsInline
         />
+
         <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-2 right-2 focus-within:opacity-100">
           {githubUrl && (
             <a
