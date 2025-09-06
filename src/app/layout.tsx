@@ -73,7 +73,15 @@ export const metadata: Metadata = {
     description: 'Transformando ideias em experiências digitais marcantes.',
     url: 'https://pigeonlab.vercel.app',
     siteName: "Pigeon's Lab",
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [
+      {
+        url: 'https://pigeonlab.vercel.app/og-image.png',
+        type: 'image/png',
+        alt: 'Dando asas à sua ideia',
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: 'pt_BR',
     type: 'website',
   },
@@ -81,7 +89,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Pigeon's Lab",
     description: 'Transformando ideias em experiências digitais marcantes.',
-    images: ['/og-image.png'],
+    images: [
+      {
+        url: 'https://pigeonlab.vercel.app/og-image.png',
+        type: 'image/png',
+        alt: 'Dando asas à sua ideia',
+      },
+    ],
   },
   alternates: {},
   verification: {
