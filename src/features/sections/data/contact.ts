@@ -1,3 +1,4 @@
+import InstagramIcon from '@/components/InstagramIcon';
 import LinkedInIcon from '@/components/LinkedInIcon';
 import { Mail } from 'lucide-react';
 
@@ -20,6 +21,12 @@ export const contact = {
       action: 'Conectar',
       link: { href: 'https://www.linkedin.com/in/julioc090/', blank: true },
       icon: LinkedInIcon,
+    },
+    {
+      title: 'Instagram',
+      action: 'Seguir',
+      link: { href: 'https://www.instagram.com/thepigeonlab/', blank: true },
+      icon: InstagramIcon,
     },
   ],
   toast: {
