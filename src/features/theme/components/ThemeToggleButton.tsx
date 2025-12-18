@@ -3,26 +3,22 @@
 import { IconToggleButton } from '@/components/IconToggleButton';
 import { useTheme } from '@/features/theme/hooks/useTheme';
 import { Moon, Sun } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 export default function ThemeToggleButton() {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
+  if (!resolvedTheme) {
     return null;
   }
+
+  const isLight = resolvedTheme === 'light';
 
   return (
     <IconToggleButton
       iconOn={<Sun />}
       iconOff={<Moon />}
-      active={resolvedTheme === 'light'}
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      active={isLight}
+      onClick={() => setTheme(isLight ? 'dark' : 'light')}
       aria-label="Toggle theme"
     />
   );

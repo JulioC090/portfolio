@@ -36,6 +36,7 @@ export function ThemeProvider({
     }
 
     root.classList.add(appliedTheme);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setResolvedTheme(appliedTheme);
   }, [storedTheme]);
 

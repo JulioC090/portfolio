@@ -2,12 +2,13 @@ import { FlatCompat } from '@eslint/eslintrc';
 import eslintJs from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 const compat = new FlatCompat();
 
-export default tseslint.config(
+export default defineConfig(
   // Recommended JavaScript configuration
   eslintJs.configs.recommended,
 
@@ -64,6 +65,9 @@ export default tseslint.config(
       'import/no-anonymous-default-export': 'off',
       '@next/next/no-html-link-for-pages': ['error', 'projects/web/.'],
       '@typescript-eslint/triple-slash-reference': 'off',
+      'tailwindcss/no-custom-classname': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'classnames-order': 'off',
     },
   }),
 );
